@@ -57,7 +57,8 @@ Examples:
 
 function hasNoDuplicates(arr) {
     const noDupes = new Set(arr);
-    return noDupes.length === arr.length;
+    
+    return noDupes.size === arr.length;
 }
 
 /*
@@ -101,7 +102,7 @@ Examples:
 
 function hasCertainValue(arr, key, searchValue) {
     const certainCheck = arr.every(function (obj){
-        return obj[key] = searchValue;
+        return obj[key] === searchValue;
     })
 
     return certainCheck;
